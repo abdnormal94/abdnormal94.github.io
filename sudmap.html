@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_10fc9b7691afd410c71deb250149b19a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_10fc9b7691afd410c71deb250149b19a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_10fc9b7691afd410c71deb250149b19a = L.map(
+                "map_10fc9b7691afd410c71deb250149b19a",
+                {
+                    center: [15.500654, 32.559898],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_02c3fc0cb67b2694a8e31fca863f8b38 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_10fc9b7691afd410c71deb250149b19a);
+        
+    
+        function geo_json_2df138fe772b9fdf85a8b1a345337ac3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#228B22", "fillColor": "#228B22"};
+            }
+        }
+
+        function geo_json_2df138fe772b9fdf85a8b1a345337ac3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2df138fe772b9fdf85a8b1a345337ac3 = L.geoJson(null, {
+                onEachFeature: geo_json_2df138fe772b9fdf85a8b1a345337ac3_onEachFeature,
+            
+                style: geo_json_2df138fe772b9fdf85a8b1a345337ac3_styler,
+        });
+
+        function geo_json_2df138fe772b9fdf85a8b1a345337ac3_add (data) {
+            geo_json_2df138fe772b9fdf85a8b1a345337ac3
+                .addData(data)
+                .addTo(map_10fc9b7691afd410c71deb250149b19a);
+        }
+            geo_json_2df138fe772b9fdf85a8b1a345337ac3_add({"bbox": [31.7944336, 16.0583308, 35.6945801, 22.0147502], "features": [{"bbox": [31.7944336, 16.0583308, 35.6945801, 22.0147502], "geometry": {"coordinates": [[[32.5415039, 21.9924798], [32.4975586, 22.0147502], [32.2338867, 18.959436], [32.6843262, 18.6371098], [32.6074219, 18.2724572], [32.7062988, 17.9488375], [31.7944336, 16.6274729], [31.9921875, 16.5958976], [32.1679688, 16.4484777], [32.7282715, 16.4484777], [33.2885742, 16.2798606], [33.815918, 16.0583308], [34.2773438, 16.2165918], [34.420166, 16.4590114], [35.4309082, 16.4484777], [35.6945801, 16.7747555], [35.6835938, 17.1634511], [35.2111816, 17.4570598], [34.9365234, 17.9070367], [34.552002, 18.2307335], [34.1015625, 18.3558745], [33.848877, 18.9282648], [33.6950684, 19.6435915], [33.717041, 20.3744191], [33.5742188, 20.6727232], [33.2775879, 21.083216], [33.3435059, 21.3289701], [33.2556152, 21.5640989], [33.5522461, 21.7682494], [33.145752, 22.0128469], [32.5415039, 21.9924798]]], "type": "Polygon"}, "id": "0", "properties": {"control": "\u0627\u0644\u062f\u0639\u0645 \u0627\u0644\u0633\u0631\u064a\u0639", "link": "https://sudanwarmonitor.com/p/map-of-the-areas-of-control-in-sudan-2ea", "name": "north_nile"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_2df138fe772b9fdf85a8b1a345337ac3.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["link", "control"];
+    let aliases = ["link:", "\u062a\u062d\u062a \u0633\u064a\u0637\u0631\u0629"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+</script>
+</html>
